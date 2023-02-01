@@ -4,11 +4,11 @@
 // При этом вместо чисел, кратных трем, программа должна выводить слово «Fizz», а вместо чисел, кратных пяти, — слово «Buzz». Если число кратно и 3, и 5, то программа должна выводить слово «FizzBuzz»
 
 for (let i = 1; i < 101; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
         console.log("FizzBuzz");
-    } else if (i % 5 == 0) {
+    } else if (i % 5 === 0) {
         console.log("Buzz");
-    } else if (i % 3 == 0) {
+    } else if (i % 3 === 0) {
         console.log("Fizz");
     } else {
         console.log(i);
