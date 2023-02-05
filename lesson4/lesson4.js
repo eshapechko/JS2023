@@ -107,6 +107,22 @@ const filterFor = (arr, a) => {
 };
 console.log(filterFor(arr, 2));
 
+// или так
+
+// let arr = [5, 4, 3, 8, 0];
+// const filterFor = (arr, a) => {
+//     let newArr = [];
+//     arr.forEach((element) => {
+//         if (element >= a) {
+//             newArr.push(element);
+//         }
+//     });
+//     return newArr;
+// };
+
+// console.log(filterFor(arr, 3));
+// console.log(filterFor(arr, 10));
+
 // Задание 5
 // Напишите функцию copyArr(arr), которая копирует массив, не изменяя оригинал. Используйте подходящий метод массива.
 
