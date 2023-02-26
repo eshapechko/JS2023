@@ -1,0 +1,69 @@
+.contacts {
+    color: var(--accent-color);
+}
+
+.contacts .container {
+    background-image: url(../img/contacts.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contacts__content-wrapper {
+    padding: 60px 0 195px;
+    display: flex;
+    justify-content: end;
+}
+.contacts__form-title {
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    margin-bottom: 40px;
+}
+.contacts__form {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.email,
+.phone,
+.message {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #bdae82;
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--accent-color);
+    padding: 3px 20px;
+    outline: none;
+}
+
+.message {
+    height: 100px;
+    margin-bottom: 0;
+}
+
+.contacts__btn {
+    background-color: var(--accent-color);
+    border: none;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--dark-color);
+    margin-top: 30px;
+}
+
+@media (max-width: 870px) {
+    .contacts__content-wrapper {
+        padding: 60px 0 110px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 690px) {
+    .contacts__form {
+        width: 300px;
+    }
+}

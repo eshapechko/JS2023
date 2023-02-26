@@ -1,0 +1,153 @@
+.price {
+    padding-top: 100px;
+}
+
+.price__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.price__title-line {
+    width: 279px;
+    height: 2px;
+    border-color: var(--accent-color);
+}
+
+.price__title-text {
+    padding: 0 20px;
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    color: var(--accent-color);
+}
+
+.price__cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.price__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--accent-color);
+    padding: 43px 115px;
+    max-width: 450px;
+}
+
+.price__card-title {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 56px;
+}
+
+.price__card-cost {
+    padding: 20px 0;
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    color: var(--accent-color);
+}
+
+.price__card-features-text {
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.price__card-btn {
+    margin-top: 40px;
+    background-color: var(--accent-color);
+    border: none;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--dark-color);
+}
+
+@media (max-width: 1430px) {
+    .price__cards-wrapper {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 950px) {
+    .price__cards-wrapper {
+        grid-template-columns: max-content;
+        gap: 50px;
+    }
+
+    .price__card {
+        padding: 43px 100px;
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 870px) {
+    .price {
+        padding: 80px 0;
+    }
+
+    .price__title {
+        padding-bottom: 50px;
+    }
+
+    .price__title-line {
+        width: 121px;
+    }
+
+    .price__title-text {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 425px) {
+    .price {
+        padding: 55px 0;
+    }
+
+    .price__card {
+        padding: 40px 80px;
+        max-width: 360px;
+    }
+
+    .price__title {
+        padding-bottom: 40px;
+    }
+
+    .price__title-line {
+        width: 117px;
+    }
+}
+
+@media (max-width: 375px) {
+    .price {
+        padding: 55px 0;
+    }
+
+    .price__card {
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 355px) {
+    .price {
+        padding: 55px 0;
+    }
+
+    .price__card {
+        max-width: 280px;
+    }
+
+    .price__card-features {
+        width: max-content;
+    }
+}

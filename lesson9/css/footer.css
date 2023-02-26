@@ -1,0 +1,49 @@
+.footer {
+    padding: 50px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__info-text {
+    padding: 0 20px;
+}
+
+.footer__school-link,
+.footer__info-link,
+.footer__info-text {
+    font-size: 20px;
+    line-height: 50px;
+}
+.footer__social {
+    display: flex;
+    gap: 22px;
+}
+
+.footer__social-link svg:hover path {
+    fill: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 28px 0;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__school-link,
+    .footer__info-link,
+    .footer__info-text {
+        line-height: 24px;
+    }
+
+    .footer__school-link {
+        margin: 16px 0 20px;
+    }
+}
