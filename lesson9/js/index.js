@@ -100,3 +100,10 @@ const toggleLanguage = () => {
     });
 };
 toggleLanguage();
+
+// Contacts Form Submit
+const contactsForm = document.querySelector(".contacts__form");
+
+contactsForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+});
