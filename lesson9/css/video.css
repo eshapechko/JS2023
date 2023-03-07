@@ -1,0 +1,81 @@
+.video {
+    padding-top: 100px;
+}
+
+.video__container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.video__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+.video__title-line {
+    width: 274px;
+    height: 2px;
+    border-color: var(--accent-color);
+}
+.video__title-text {
+    padding: 0 20px;
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    color: var(--accent-color);
+}
+
+.video__wrapper {
+    position: relative;
+}
+
+.video__wrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.video__wrapper svg:hover path {
+    fill: var(--accent-color);
+}
+
+.video__player {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+@media (max-width: 870px) {
+    .video {
+        padding-top: 80px;
+    }
+
+    .video__container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .video__title {
+        padding-bottom: 50px;
+    }
+    .video__title-line {
+        width: 117px;
+    }
+    .video__title-text {
+        font-size: 32px;
+    }
+
+    .video__wrapper svg {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (max-width: 375px) {
+    .video__title-line {
+        width: 110px;
+    }
+}
