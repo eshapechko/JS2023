@@ -103,7 +103,9 @@ toggleLanguage();
 
 // Contacts Form Submit
 const contactsForm = document.querySelector(".contacts__form");
+const contactsBtn = document.querySelector(".contacts__btn");
 
 contactsForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    // localStorage.setItem("string", JSON.stringify(e));
 });
