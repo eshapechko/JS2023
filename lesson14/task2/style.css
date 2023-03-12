@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.content {
+    max-width: 400px;
+    background-color: bisque;
+    padding: 20px;
+}
+
+.btn {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #000;
+    border-right: solid 15px #000;
+}
+
+.dark {
+    background-color: #000;
+}
