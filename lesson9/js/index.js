@@ -35,7 +35,7 @@ const heroContactsPopup = () => {
     });
 
     heroPopup.addEventListener("click", (e) => {
-        if (e.target.closest(".btn__popup-close")) {
+        if (e.target.closest(".btn__popup-close") || e.target === heroPopup) {
             heroPopup.classList.remove("active");
         }
     });
@@ -92,7 +92,7 @@ const portfolioImageController = () => {
     });
 
     portfolioPopup.addEventListener("click", (e) => {
-        if (e.target.closest(".portfolio__btn_popup-close")) {
+        if (e.target.closest(".portfolio__btn_popup-close") || e.target === portfolioPopup) {
             portfolioPopup.classList.remove("active");
         }
     });
