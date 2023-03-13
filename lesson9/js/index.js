@@ -25,16 +25,35 @@ hiddenMenuItem.forEach((item) =>
 // Hero button click
 const heroBtn = document.querySelector(".hero__btn");
 const heroPopup = document.querySelector(".hero__popup");
+const heroPopupForm = document.forms.hero_form;
+const inputEmailPopupHero = heroPopupForm.email;
+const inputPhonePopupHero = heroPopupForm.phone;
 
-heroBtn.addEventListener("click", () => {
-    heroPopup.classList.add("active");
-});
+const heroContactsPopup = () => {
+    heroBtn.addEventListener("click", () => {
+        heroPopup.classList.add("active");
+    });
 
-heroPopup.addEventListener("click", (e) => {
-    if (e.target.closest(".btn__popup-close") || e.target.closest(".contacts__btn")) {
+    heroPopup.addEventListener("click", (e) => {
+        if (e.target.closest(".btn__popup-close")) {
+            heroPopup.classList.remove("active");
+        }
+    });
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            heroPopup.classList.remove("active");
+        }
+    });
+
+    heroPopupForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log(`Email: ${inputEmailPopupHero.value}, Phone number:  ${inputPhonePopupHero.value}`);
         heroPopup.classList.remove("active");
-    }
-});
+    });
+};
+
+heroContactsPopup();
 
 // Portfolio navigation
 const portfolioButtons = document.querySelectorAll(".portfolio__btn");
@@ -77,6 +96,12 @@ const portfolioImageController = () => {
             portfolioPopup.classList.remove("active");
         }
     });
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            portfolioPopup.classList.remove("active");
+        }
+    });
 };
 portfolioImageController();
 
@@ -102,10 +127,12 @@ const toggleLanguage = () => {
 toggleLanguage();
 
 // Contacts Form Submit
-const contactsForm = document.querySelector(".contacts__form");
-const contactsBtn = document.querySelector(".contacts__btn");
+
+const contactsForm = document.forms.main;
+const inputEmail = contactsForm.main_email;
+const inputPhone = contactsForm.main_tel;
 
 contactsForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    // localStorage.setItem("string", JSON.stringify(e));
+    console.log(`Email: ${inputEmail.value}, Phone number:  ${inputPhone.value}`);
 });
